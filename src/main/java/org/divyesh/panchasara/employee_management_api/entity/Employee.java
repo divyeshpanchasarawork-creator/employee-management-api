@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "employees")
-public class EmployeeEntity {
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -28,7 +28,7 @@ public class EmployeeEntity {
 
     private Boolean isActive;
 
-    public EmployeeEntity() {
+    public Employee() {
     }
 
     public Long getId() {
