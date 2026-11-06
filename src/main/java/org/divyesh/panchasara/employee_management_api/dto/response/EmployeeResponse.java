@@ -1,6 +1,7 @@
 package org.divyesh.panchasara.employee_management_api.dto.response;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class EmployeeResponse {
     private String firstName;
@@ -11,6 +12,9 @@ public class EmployeeResponse {
     private BigDecimal salary;
 
     public EmployeeResponse() {
+    }
+
+    public EmployeeResponse(Long id, String firstName, String lastName, String email, Integer age, String department, BigDecimal salary, LocalDate createdAt, Boolean active) {
     }
 
     public String getFirstName() {

@@ -1,5 +1,6 @@
 package org.divyesh.panchasara.employee_management_api.dto.response;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -17,6 +18,9 @@ public class ApiError {
         this.error = error;
         this.message = message;
         this.path = path;
+    }
+
+    public ApiError(LocalDate now, int i, String badRequest, String validationFailed, String requestURI, Map<String, String> fieldErrors) {
     }
 
     public LocalDateTime getTimestamp() {
