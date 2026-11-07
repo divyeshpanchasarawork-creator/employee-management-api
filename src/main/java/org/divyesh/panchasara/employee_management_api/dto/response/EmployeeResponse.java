@@ -1,9 +1,9 @@
 package org.divyesh.panchasara.employee_management_api.dto.response;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 
 public class EmployeeResponse {
+    private Long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -14,7 +14,14 @@ public class EmployeeResponse {
     public EmployeeResponse() {
     }
 
-    public EmployeeResponse(Long id, String firstName, String lastName, String email, Integer age, String department, BigDecimal salary, LocalDate createdAt, Boolean active) {
+    public EmployeeResponse(Long id, String firstName, String lastName, String email, Integer age, String department, BigDecimal salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+        this.department = department;
+        this.salary = salary;
     }
 
     public String getFirstName() {
@@ -63,5 +70,13 @@ public class EmployeeResponse {
 
     public void setSalary(BigDecimal salary) {
         this.salary = salary;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

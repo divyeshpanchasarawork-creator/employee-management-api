@@ -18,7 +18,6 @@ public class EmployeePatchRequest {
     @Max(value = 65, message = "Employee age cannot exceed 65 years")
     private Integer age;
 
-    @NotBlank(message = "Department shall not be empty/blank/null")
     private String department;
 
     @DecimalMin(value = "15000.00", message = "Minimum salary shall be 15000")

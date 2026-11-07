@@ -12,15 +12,13 @@ public class ApiError {
     private String path;
     private Map<String, String> fieldErrors;
 
-    public ApiError(int status, String error, String message, String path) {
-        this.timestamp = LocalDateTime.now();
+    public ApiError(LocalDateTime timestamp, int status, String error, String message, String path, Map<String, String> fieldErrors) {
+        this.timestamp = timestamp;
         this.status = status;
         this.error = error;
         this.message = message;
         this.path = path;
-    }
-
-    public ApiError(LocalDate now, int i, String badRequest, String validationFailed, String requestURI, Map<String, String> fieldErrors) {
+        this.fieldErrors = fieldErrors;
     }
 
     public LocalDateTime getTimestamp() {

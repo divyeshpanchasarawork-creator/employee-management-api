@@ -16,7 +16,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -40,7 +40,7 @@ public class GlobalExceptionHandler {
         );
 
         ApiError error = new ApiError(
-                LocalDate.now(),
+                LocalDateTime.now(),
                 400,
                 "Bad Request",
                 "Validation failed",
@@ -67,7 +67,7 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(
                 new ApiError(
-                        LocalDate.now(),
+                        LocalDateTime.now(),
                         400,
                         "Bad Request",
                         "Parameter validation failed",
@@ -159,7 +159,7 @@ public class GlobalExceptionHandler {
             HttpServletRequest request) {
 
         ApiError error = new ApiError(
-                LocalDate.now(),
+                LocalDateTime.now(),
                 status.value(),
                 status.getReasonPhrase(),
                 message,

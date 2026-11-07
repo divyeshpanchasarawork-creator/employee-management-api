@@ -287,7 +287,6 @@ public class EmployeeService {
     }
 
     private EmployeeResponse mapToResponse(Employee employee) {
-
         return new EmployeeResponse(
                 employee.getId(),
                 employee.getFirstName(),
@@ -295,9 +294,7 @@ public class EmployeeService {
                 employee.getEmail(),
                 employee.getAge(),
                 employee.getDepartment(),
-                employee.getSalary(),
-                employee.getCreatedAt(),
-                employee.getActive()
+                employee.getSalary()
         );
     }
 }
